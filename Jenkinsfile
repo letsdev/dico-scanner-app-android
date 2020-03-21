@@ -16,6 +16,7 @@ pipeline {
         timestamps()
         ansiColor('xterm')
         buildDiscarder logRotator(numToKeepStr: '20')
+        disableConcurrentBuilds()
     }
     stages {
         stage('Build') {
